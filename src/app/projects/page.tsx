@@ -69,13 +69,15 @@ const projects: Project[] = [
     name: "healthcare appointment system",
     category: "custom software",
     description:
-      "appointment scheduling and telemedicine platform for medical practices with video consultations and automated reminders.",
+      "full-stack healthcare platform with role-based dashboards for patients, doctors, and admins — featuring appointment booking, schedule management, medical records, and mock video consultations.",
     challenge:
-      "building a scheduling system with integrated video consultations, automated reminders, and patient management.",
+      "building a multi-role healthcare system with appointment scheduling, doctor availability management, medical records, and role-based access control.",
     solution:
-      "custom web and mobile solution with video consultations, automated reminders, and patient records management.",
-    stack: ["Next.js", "React Native", "Supabase", "WebRTC", "Vercel"],
+      "Next.js 15 app with Supabase auth and RLS for data isolation, Redux Toolkit for state management, and a teal-themed responsive UI with dark mode support.",
+    stack: ["Next.js", "TypeScript", "Supabase", "Redux Toolkit", "Tailwind CSS", "Vercel"],
     image: "/projects/healthcare.jpg",
+    liveUrl: "https://healthcare-app-chyashp.vercel.app",
+    repoUrl: "https://github.com/chyashp/healthcare-app",
   },
   {
     name: "content automation platform",
