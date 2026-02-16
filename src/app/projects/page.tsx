@@ -54,8 +54,8 @@ const projects: Project[] = [
       "full-stack dashboard with Chart.js visualizations, date-range filtering, row-level security via Supabase, and dark mode support.",
     stack: ["Next.js", "Supabase", "TypeScript", "Chart.js", "Vercel"],
     image: "/projects/analytics.jpg",
-    liveUrl: "https://ecom-dash-gamma.vercel.app",
-    repoUrl: "https://github.com/nanushi-k/ecom-dash",
+    liveUrl: "https://ecom-dash-psi.vercel.app",
+    repoUrl: "https://github.com/chyashp/ecom-dash",
     screenshots: [
       { src: "/projects/ecom-dash/1.png", alt: "dashboard overview" },
       { src: "/projects/ecom-dash/2.png", alt: "analytics charts" },
