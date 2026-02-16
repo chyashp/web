@@ -1,0 +1,153 @@
+# NANUSHI BLOG ARTICLE GENERATION PROMPT
+
+You are tasked with creating an SEO-optimized blog article for nanushi, a platform that helps mobile developers gain real project experience. Follow these guidelines exactly:
+
+## ARTICLE FORMAT
+
+1. **Markdown Structure**:
+   - Use lowercase for all text
+   - Create content in standard markdown format
+   - Include proper syntax highlighting for code blocks
+
+2. **Front Matter**:
+   ```
+   ---
+   title: "keyword-rich title in lowercase"
+   excerpt: one-sentence description with primary keyword
+   date: 'YYYY-MM-DD'
+   tags:
+     - primary-keyword
+     - secondary-keyword
+     - related-technology
+     - mobile-development
+   ---
+   ```
+
+3. **Required Sections**:
+   - H1 title (same as front matter title)
+   - 2-3 paragraph introduction with primary keyword
+   - 5-7 H2 sections covering different aspects of the topic
+   - H3 subsections where appropriate
+   - "key takeaways" section at the end
+   - Custom CTA that relates to the article topic
+
+## SEO REQUIREMENTS
+
+1. **Keywords**:
+   - Include primary keyword in: title, first paragraph, at least one H2, and conclusion
+   - Use secondary keywords naturally throughout (1-2% keyword density)
+   - Focus on long-tail technical keywords (3-5 words)
+
+2. **Links**:
+   - Include 3-7 external links to authoritative sources (React docs, MDN, engineering blogs)
+   - Use descriptive anchor text containing keywords
+   - Example: "as [recommended in the React Native documentation](https://reactnative.dev/docs/performance)"
+
+3. **Content Depth**:
+   - Write 1,500-2,500 words of in-depth technical content
+   - Focus on actionable advice backed by code examples
+   - Include implementation details, not just theory
+
+## CODE SNIPPETS
+
+1. **Format**:
+   - Use triple backticks with language specification
+   - Example: ```typescript
+   - Keep snippets between 10-30 lines
+   - Include explanatory comments
+
+2. **Content**:
+   - Show real-world implementation examples
+   - Include both "before" and "after" examples when discussing optimization
+   - Focus on production-ready patterns, not just concepts
+
+## STYLE GUIDE
+
+1. **Voice & Tone**:
+   - Expert but accessible
+   - Direct and practical
+   - Use "you" to address the reader
+   - Assume intermediate technical knowledge
+
+2. **Formatting**:
+   - Short paragraphs (2-3 sentences)
+   - Use bullet points for lists
+   - Bold important concepts
+   - Create white space for readability
+
+## CTA FORMAT
+
+Always end with this specific format adjusted to the article topic:
+
+```
+---
+
+ready to [verb related to article topic] in a real mobile development environment? join nanushi's next project team and [benefit related to article content] alongside experienced developers.
+
+```typescript
+// [clever comment related to article topic]
+const yourJourney = await joinnanushi({
+  skills: ['skill-from-article', 'react-native'],
+  goal: 'practical outcome from article'
+})
+```
+```
+
+## EXAMPLE OUTLINE
+
+```
+---
+title: "optimizing react native flatlist performance"
+excerpt: learn practical techniques for improving flatlist performance in react native apps.
+date: '2024-03-25'
+tags:
+  - react-native
+  - performance
+  - flatlist
+  - mobile-development
+---
+
+# optimizing react native flatlist performance
+
+[introduction with problem statement and keyword]
+
+## understanding flatlist rendering
+[explain with external link to docs]
+
+## common performance bottlenecks
+[identify specific issues with code examples]
+
+## virtualization techniques
+[implementation with code samples]
+
+## memory optimization strategies
+[practical tips with before/after code]
+
+## measuring performance improvements
+[tools and metrics with examples]
+
+## key takeaways
+[bullet point summary]
+
+---
+
+ready to optimize performance in real-world mobile apps? join nanushi's next project team and implement these techniques alongside experienced developers.
+
+```typescript
+// optimize your mobile dev career
+const yourExperience = await joinnanushi({
+  skills: ['performance optimization', 'react native'],
+  goal: 'building production-ready apps'
+})
+```
+```
+
+## FINAL REQUIREMENTS
+
+1. Ensure all content is technically accurate and follows current best practices
+2. Provide unique insights not easily found in other articles
+3. Make sure every code example is functional and follows best practices
+4. Include practical advice based on real-world development experience
+5. Ensure total article length is between 1,500-2,500 words
+
+Now write a comprehensive, SEO-optimized article about [TOPIC] following these guidelines exactly. 

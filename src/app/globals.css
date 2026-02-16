@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Primary - Orange */
+  --color-primary-50: #fff7ed;
+  --color-primary-100: #ffedd5;
+  --color-primary-200: #ffd7b5;
+  --color-primary-300: #ffb088;
+  --color-primary-400: #ff8d5c;
+  --color-primary-500: #ff6b2b;
+  --color-primary-600: #f85a1a;
+  --color-primary-700: #e54712;
+  --color-primary-800: #c53812;
+  --color-primary-900: #a12f14;
+
+  /* Secondary - Slate */
+  --color-secondary-50: #f8fafc;
+  --color-secondary-100: #f1f5f9;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e1;
+  --color-secondary-400: #94a3b8;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #475569;
+  --color-secondary-700: #334155;
+  --color-secondary-800: #1e293b;
+  --color-secondary-900: #0f172a;
+
+  /* Navy - Dark Blue */
+  --color-navy-50: #e6eef7;
+  --color-navy-100: #ccddef;
+  --color-navy-200: #99bbe0;
+  --color-navy-300: #6699d0;
+  --color-navy-400: #3377c1;
+  --color-navy-500: #1a365d;
+  --color-navy-600: #162d4e;
+  --color-navy-700: #11243f;
+  --color-navy-800: #0d1b30;
+  --color-navy-900: #081221;
+
+  /* Fonts */
+  --font-sans: system-ui, -apple-system, "SF Pro Text", "SF Pro Display",
+    BlinkMacSystemFont, var(--font-inter), "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #171717;
+  font-family: var(--font-sans);
+}
