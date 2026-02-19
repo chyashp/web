@@ -51,6 +51,7 @@ const navigation = {
     { name: "about", href: "/about" },
     { name: "portfolio", href: "/projects" },
     { name: "blog", href: "/blog" },
+    { name: "contact", href: "/contact" },
   ],
   community: [
     { name: "missions", href: "/missions" },

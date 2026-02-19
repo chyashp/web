@@ -101,11 +101,17 @@ const process = [
   },
 ];
 
-const stats = [
-  { label: "Projects Delivered", value: "50+" },
-  { label: "Client Satisfaction", value: "100%" },
-  { label: "Global Team", value: "15+" },
-  { label: "Years Experience", value: "10+" },
+const technologies = [
+  "Next.js",
+  "React",
+  "TypeScript",
+  "React Native",
+  "Node.js",
+  "Supabase",
+  "PostgreSQL",
+  "OpenAI",
+  "Tailwind CSS",
+  "Vercel",
 ];
 
 export default function HomeClient() {
@@ -268,45 +274,27 @@ export default function HomeClient() {
         </div>
       </div>
 
-      {/* Social Proof Section */}
+      {/* Technologies Section */}
       <div className="bg-navy-500 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:max-w-none">
             <div className="text-center">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Trusted by businesses worldwide
+                Technologies We Work With
               </h2>
               <p className="mt-4 text-lg leading-8 text-gray-300">
-                We&apos;ve helped companies of all sizes build exceptional
-                software.
+                Modern tools and frameworks to build fast, scalable, and reliable software.
               </p>
             </div>
-            <dl className="mt-16 grid grid-cols-2 gap-8 sm:mt-20 lg:grid-cols-4">
-              {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="flex flex-col-reverse gap-y-4 text-center"
+            <div className="mt-16 flex flex-wrap justify-center gap-4 sm:mt-20">
+              {technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="inline-flex items-center rounded-full bg-white/10 px-5 py-2.5 text-base font-medium text-white ring-1 ring-white/20"
                 >
-                  <dt className="text-base leading-7 text-gray-300">
-                    {stat.label}
-                  </dt>
-                  <dd className="text-4xl font-bold leading-9 tracking-tight text-white">
-                    {stat.value}
-                  </dd>
-                </div>
+                  {tech}
+                </span>
               ))}
-            </dl>
-            <div className="mt-16 text-center">
-              <p className="text-base leading-7 text-gray-300">
-                We also run{" "}
-                <Link
-                  href="/community"
-                  className="font-semibold text-primary-400 hover:text-primary-300 transition-colors"
-                >
-                  nanushi Community
-                </Link>{" "}
-                — a collaborative learning platform for mobile developers
-              </p>
             </div>
           </div>
         </div>

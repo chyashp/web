@@ -63,6 +63,31 @@ export const metadata: Metadata = {
   manifest: "/favicons/site.webmanifest",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "nanushi",
+  url: "https://nanushi.org",
+  description:
+    "We build intelligent digital solutions for modern businesses. Custom AI applications, full-stack web platforms, mobile apps, and bespoke software.",
+  sameAs: [
+    "https://twitter.com/nanushidev",
+    "https://github.com/nanushi-io",
+    "https://www.linkedin.com/company/nanushi",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "yash.yash4456@gmail.com",
+    contactType: "sales",
+  },
+  serviceType: [
+    "AI & Machine Learning",
+    "Web Development",
+    "Mobile Development",
+    "Custom Software",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -70,6 +95,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={inter.className}>
         <AuthProvider>
           <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
