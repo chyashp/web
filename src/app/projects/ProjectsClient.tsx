@@ -86,7 +86,7 @@ const projects: Project[] = [
     ],
   },
   {
-    name: "healthcare appointment system",
+    name: "HealthPulse — healthcare appointment system",
     category: "custom software",
     description:
       "full-stack healthcare platform with role-based dashboards for patients, doctors, and admins — featuring appointment booking, schedule management, medical records, and mock video consultations.",
