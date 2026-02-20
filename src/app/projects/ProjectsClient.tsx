@@ -119,7 +119,7 @@ const projects: Project[] = [
       "building an AI-powered content pipeline that maintains brand voice across blog posts, social media, and email.",
     solution:
       "LLM-powered platform generating blog posts, social media content, and email campaigns with brand voice consistency.",
-    stack: ["Next.js", "Claude API", "Supabase", "Vercel"],
+    stack: ["Next.js", "LLM API", "Supabase", "Vercel"],
     image: "/projects/content-ai.jpg",
     enabled: false,
   },

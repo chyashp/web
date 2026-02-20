@@ -27,13 +27,13 @@ const services = [
     description: 'Transform your business with intelligent automation and AI-powered solutions that learn and adapt.',
     features: [
       'Custom chatbots and conversational AI',
-      'LLM integrations (GPT, Claude, etc.)',
+      'LLM integrations (GPT, Gemini, etc.)',
       'Intelligent process automation',
       'Natural language processing',
       'Predictive analytics and forecasting',
       'Computer vision and image recognition',
     ],
-    technologies: ['OpenAI', 'Anthropic Claude', 'TensorFlow', 'PyTorch', 'Hugging Face', 'LangChain'],
+    technologies: ['OpenAI', 'Gemini', 'TensorFlow', 'PyTorch', 'Hugging Face', 'LangChain'],
     useCases: [
       'Customer support automation with AI chatbots',
       'Document processing and intelligent search',
