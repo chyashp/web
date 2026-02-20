@@ -207,7 +207,7 @@ export default function ProjectsClient() {
           {filteredProjects.map((project, index) => (
             <div
               key={project.name}
-              className={`grid gap-8 lg:grid-cols-2 lg:gap-12 lg:items-start ${index % 2 === 1 ? "lg:grid-flow-dense" : ""}`}
+              className={`grid gap-8 lg:grid-cols-2 lg:gap-12 lg:items-center ${index % 2 === 1 ? "lg:grid-flow-dense" : ""}`}
             >
               <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
                 <div
