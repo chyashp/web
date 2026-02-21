@@ -165,7 +165,7 @@ export default function AboutClient() {
             <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-12 lg:max-w-none lg:grid-cols-3">
               {values.map((value, index) => (
                 <ScrollReveal key={value.name} delay={index * 0.1}>
-                  <div className="flex flex-col bg-white p-8 rounded-xl shadow-sm">
+                  <div className="flex flex-col bg-white p-8 rounded-xl shadow-sm h-full">
                     <dt className="flex items-center gap-x-3 text-lg font-semibold leading-7 text-navy-500">
                       <value.icon
                         className="h-7 w-7 flex-none text-primary-500"
