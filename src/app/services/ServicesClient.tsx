@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import ContactModal from '@/components/ContactModal'
 import ScrollReveal from '@/components/ScrollReveal'
+import { ServicesIllustration } from '@/components/illustrations'
 import { GradientBlob } from '@/components/decorations'
 import {
   SparklesIcon,
@@ -22,27 +23,6 @@ import {
 } from '@heroicons/react/24/outline'
 
 const services = [
-  {
-    id: 'ai-ml',
-    name: 'AI & Machine Learning',
-    icon: SparklesIcon,
-    description: 'Transform your business with intelligent automation and AI-powered solutions that learn and adapt.',
-    features: [
-      'Custom chatbots and conversational AI',
-      'LLM integrations (GPT, Gemini, etc.)',
-      'Intelligent process automation',
-      'Natural language processing',
-      'Predictive analytics and forecasting',
-      'Computer vision and image recognition',
-    ],
-    technologies: ['OpenAI', 'Gemini', 'TensorFlow', 'PyTorch', 'Hugging Face', 'LangChain'],
-    useCases: [
-      'Customer support automation with AI chatbots',
-      'Document processing and intelligent search',
-      'Personalized recommendations and content',
-      'Automated data analysis and insights',
-    ],
-  },
   {
     id: 'web-dev',
     name: 'Web Development',
@@ -106,6 +86,27 @@ const services = [
       'Custom reporting and analytics',
     ],
   },
+  {
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    icon: SparklesIcon,
+    description: 'Transform your business with intelligent automation and AI-powered solutions that learn and adapt.',
+    features: [
+      'Custom chatbots and conversational AI',
+      'LLM integrations (GPT, Gemini, etc.)',
+      'Intelligent process automation',
+      'Natural language processing',
+      'Predictive analytics and forecasting',
+      'Computer vision and image recognition',
+    ],
+    technologies: ['OpenAI', 'Gemini', 'TensorFlow', 'PyTorch', 'Hugging Face', 'LangChain'],
+    useCases: [
+      'Customer support automation with AI chatbots',
+      'Document processing and intelligent search',
+      'Personalized recommendations and content',
+      'Automated data analysis and insights',
+    ],
+  },
 ]
 
 const additionalServices = [
@@ -125,29 +126,40 @@ export default function ServicesClient() {
   const [isContactOpen, setIsContactOpen] = useState(false)
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative pt-20 bg-gradient-to-b from-primary-50 to-white overflow-hidden">
-        <GradientBlob color="orange" size={500} className="-top-20 -right-20" />
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-24 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-navy-500 sm:text-6xl">
-              Our Services
-            </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-600">
-              Comprehensive development services to bring your vision to life with cutting-edge technology and expert execution.
-            </p>
+      <div className="relative pt-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/25 via-orange-50/50 to-primary-100/35" />
+        <div className="absolute inset-0 bg-white/45" />
+        <div className="relative mx-auto max-w-7xl px-6 pt-8 pb-10 sm:pt-12 sm:pb-14 lg:px-8">
+          <div className="grid lg:grid-cols-2 lg:gap-8 items-center">
+            <div>
+              <div className="inline-flex items-center rounded-full bg-primary-500/15 px-4 py-1.5 text-sm font-semibold text-primary-600 mb-6 ring-1 ring-primary-500/20">
+                What We Do
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight text-navy-500 sm:text-6xl">
+                Our Services
+              </h1>
+              <div className="mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-primary-500 to-orange-400" />
+              <p className="mt-6 text-xl leading-8 text-navy-500/70">
+                Comprehensive development services to bring your vision to life with cutting-edge technology and expert execution.
+              </p>
+            </div>
+            <ScrollReveal delay={0.2} className="hidden lg:block">
+              <ServicesIllustration className="w-full max-w-sm mx-auto" />
+            </ScrollReveal>
           </div>
         </div>
       </div>
 
       {/* Main Services */}
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <div className="space-y-24">
-          {services.map((service, index) => (
-            <ScrollReveal key={service.id}>
+      <div className="space-y-0">
+        {services.map((service, index) => (
+          <div key={service.id} className={index % 2 === 1 ? 'bg-gradient-to-b from-orange-50/40 to-primary-50/25' : ''}>
+          <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+            <ScrollReveal>
             <div id={service.id} className="relative">
-              <div className={`grid gap-12 lg:grid-cols-2 lg:gap-16 ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+              <div className={`grid gap-8 lg:grid-cols-2 lg:gap-12 ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-center gap-x-4 mb-6">
                     <div className="flex h-14 w-14 items-center justify-center rounded-lg bg-primary-500">
@@ -189,7 +201,7 @@ export default function ServicesClient() {
                 </div>
 
                 <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="rounded-2xl bg-gradient-to-br from-primary-50 to-orange-50 p-8">
+                  <div className={`rounded-2xl p-8 ${index % 2 === 1 ? 'bg-white shadow-sm ring-1 ring-gray-900/5' : 'bg-gradient-to-br from-primary-50 to-orange-50'}`}>
                     <h3 className="text-xl font-semibold text-navy-500 mb-6">Example Use Cases</h3>
                     <ul className="space-y-4">
                       {service.useCases.map((useCase, i) => (
@@ -201,7 +213,7 @@ export default function ServicesClient() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-8 pt-8 border-t border-primary-200">
+                    <div className={`mt-8 pt-8 border-t ${index % 2 === 1 ? 'border-gray-200' : 'border-primary-200'}`}>
                       <button
                         onClick={() => setIsContactOpen(true)}
                         className="w-full rounded-full bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-3 text-base font-semibold text-white shadow-lg hover:shadow-primary-500/30 hover:scale-105 transition-all"
@@ -212,21 +224,19 @@ export default function ServicesClient() {
                   </div>
                 </div>
               </div>
-              {index < services.length - 1 && (
-                <div className="mt-24 border-t border-gray-200" />
-              )}
             </div>
             </ScrollReveal>
-          ))}
-        </div>
+          </div>
+          </div>
+        ))}
       </div>
 
       {/* Additional Capabilities */}
-      <div className="bg-gray-50 py-16 sm:py-24">
+      <div className="bg-gradient-to-b from-orange-50/40 to-primary-50/25 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
-              Additional Capabilities
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">Additional Capabilities</span>
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-600">
               We offer a wide range of specialized services to complement your project needs.
@@ -253,8 +263,8 @@ export default function ServicesClient() {
         <GradientBlob color="orange" size={400} className="top-0 left-1/2 -translate-x-1/2" />
         <ScrollReveal>
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
-            Ready to get started?
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">Ready to get started?</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
             Let&apos;s discuss your project requirements and how we can help you achieve your goals.

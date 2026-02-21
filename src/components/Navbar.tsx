@@ -35,7 +35,7 @@ export default function Navbar() {
   const { user, signOut } = useAuth();
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 bg-white/80 backdrop-blur-sm">
+    <header className="fixed inset-x-0 top-0 z-50 bg-white/85 backdrop-blur-lg shadow-sm shadow-gray-200/50">
       <nav
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"

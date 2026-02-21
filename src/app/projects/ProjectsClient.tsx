@@ -5,6 +5,7 @@ import ContactModal from "@/components/ContactModal";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import Link from "next/link";
 import ScrollReveal from "@/components/ScrollReveal";
+import { ProjectsIllustration } from "@/components/illustrations";
 import { GradientBlob } from "@/components/decorations";
 
 interface Project {
@@ -156,26 +157,30 @@ export default function ProjectsClient() {
       : enabledProjects.filter((p) => p.category === selectedCategory);
 
   return (
-    <main className="bg-white min-h-screen">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative pt-20 bg-gradient-to-b from-primary-50 to-white overflow-hidden">
-        <GradientBlob color="orange" size={500} className="-top-20 -right-20" />
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-24 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1
-              className="text-5xl font-bold tracking-tight sm:text-6xl"
-              style={{ color: "#1a365d" }}
-            >
-              our work
-            </h1>
-            <p
-              className="mt-6 text-xl leading-8"
-              style={{ color: "#1a365d99" }}
-            >
-              explore the solutions we&apos;ve built across industries — from
-              AI-powered platforms to custom mobile apps and real-time
-              dashboards.
-            </p>
+      <div className="relative pt-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/25 via-orange-50/50 to-primary-100/35" />
+        <div className="absolute inset-0 bg-white/45" />
+        <div className="relative mx-auto max-w-7xl px-6 pt-8 pb-10 sm:pt-12 sm:pb-14 lg:px-8">
+          <div className="grid lg:grid-cols-2 lg:gap-8 items-center">
+            <div>
+              <div className="inline-flex items-center rounded-full bg-primary-500/15 px-4 py-1.5 text-sm font-semibold text-primary-600 mb-6 ring-1 ring-primary-500/20">
+                Portfolio
+              </div>
+              <h1 className="text-5xl font-bold tracking-tight text-navy-500 sm:text-6xl">
+                Our Work
+              </h1>
+              <div className="mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-primary-500 to-orange-400" />
+              <p className="mt-6 text-xl leading-8 text-navy-500/70">
+                Explore the solutions we&apos;ve built across industries — from
+                AI-powered platforms to custom mobile apps and real-time
+                dashboards.
+              </p>
+            </div>
+            <ScrollReveal delay={0.2} className="hidden lg:block">
+              <ProjectsIllustration className="w-full max-w-sm mx-auto" />
+            </ScrollReveal>
           </div>
         </div>
       </div>
@@ -366,14 +371,11 @@ export default function ProjectsClient() {
 
       {/* Community Projects */}
       <ScrollReveal>
-      <div className="bg-gray-50 py-16 sm:py-24">
+      <div className="bg-gradient-to-b from-orange-50/40 to-primary-50/25 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2
-              className="text-3xl font-bold tracking-tight sm:text-4xl"
-              style={{ color: "#1a365d" }}
-            >
-              community projects
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">Community Projects</span>
             </h2>
             <p
               className="mt-4 text-lg leading-8"
@@ -409,11 +411,8 @@ export default function ProjectsClient() {
         <GradientBlob color="orange" size={400} className="top-0 left-1/2 -translate-x-1/2" />
         <ScrollReveal>
         <div className="mx-auto max-w-2xl text-center">
-          <h2
-            className="text-3xl font-bold tracking-tight sm:text-4xl"
-            style={{ color: "#1a365d" }}
-          >
-            ready to start your project?
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">Ready to Start Your Project?</span>
           </h2>
           <p
             className="mx-auto mt-6 max-w-xl text-lg leading-8"

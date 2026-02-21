@@ -6,7 +6,7 @@ import { Resend } from 'resend'
 import { WaitlistConfirmationEmail } from '@/emails/WaitlistConfirmation'
 import * as React from 'react'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder')
 
 export type WaitlistResponse = {
   success: boolean

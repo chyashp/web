@@ -1,7 +1,7 @@
 import { Resend } from 'resend'
 import WelcomeEmail from '@/emails/WelcomeEmail'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder')
 
 export async function POST(request: Request) {
   try {

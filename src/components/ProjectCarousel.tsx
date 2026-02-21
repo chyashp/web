@@ -136,8 +136,7 @@ export default function ProjectCarousel({
                     backgroundColor: "#FF6B2B",
                     animation: isPaused
                       ? "none"
-                      : `progress ${interval}ms linear`,
-                    animationFillMode: "forwards",
+                      : `progress ${interval}ms linear forwards`,
                   }}
                 />
               </>

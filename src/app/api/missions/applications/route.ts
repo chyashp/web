@@ -4,7 +4,7 @@ import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
 import ApplicationConfirmationEmail from '@/components/emails/ApplicationConfirmationEmail'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const resend = new Resend(process.env.RESEND_API_KEY || 'placeholder')
 
 export async function POST(request: Request) {
   try {

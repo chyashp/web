@@ -10,7 +10,8 @@ import {
   BookOpenIcon,
 } from "@heroicons/react/24/outline";
 import ScrollReveal from "@/components/ScrollReveal";
-import { GradientBlob, DotGrid, GlowOrb } from "@/components/decorations";
+import { DotGrid, GlowOrb } from "@/components/decorations";
+import Image from "next/image";
 
 const communityLinks = [
   {
@@ -66,20 +67,29 @@ const features = [
 
 export default function CommunityClient() {
   return (
-    <main className="bg-white min-h-screen">
+    <main className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative pt-20 bg-gradient-to-b from-primary-50 to-white overflow-hidden">
-        <GradientBlob color="orange" size={500} className="-top-20 -right-20" />
-        <div className="mx-auto max-w-7xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-24 lg:px-8">
+      <div className="relative pt-20 overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/community-code.jpg"
+            alt=""
+            fill
+            className="object-cover blur-[2px]"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-navy-500/75 via-navy-500/60 to-primary-900/70" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-16 sm:pt-28 sm:pb-20 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-navy-500 sm:text-6xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               nanushi Community
             </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-600">
+            <p className="mt-6 text-xl leading-8 text-gray-200">
               A collaborative learning platform where aspiring mobile developers
               build real apps in product teams.
             </p>
-            <p className="mt-4 text-lg leading-8 text-gray-600">
+            <p className="mt-4 text-lg leading-8 text-gray-300">
               Gain hands-on experience through 6-week mobile app projects with
               developers, designers, and product managers.
             </p>
@@ -93,8 +103,8 @@ export default function CommunityClient() {
           <h2 className="text-lg font-semibold leading-7 text-primary-500">
             Learning Through Building
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
-            Real experience. Real teams. Real apps.
+          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+            <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">Real experience. Real teams. Real apps.</span>
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             The nanushi community is designed to bridge the gap between learning
@@ -126,12 +136,12 @@ export default function CommunityClient() {
       </div>
 
       {/* Community Resources */}
-      <div className="relative overflow-hidden bg-gray-50 py-16 sm:py-24">
+      <div className="relative overflow-hidden bg-gradient-to-b from-orange-50/40 to-primary-50/25 py-16 sm:py-24">
         <DotGrid opacity={0.2} />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
-              Explore Our Community
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">Explore Our Community</span>
             </h2>
             <p className="mt-4 text-lg leading-8 text-gray-600">
               Everything you need to get started with collaborative mobile
@@ -177,8 +187,8 @@ export default function CommunityClient() {
           <h2 className="text-lg font-semibold leading-7 text-primary-500">
             Skills & Experience
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
-            What you&apos;ll learn
+          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+            <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">What you&apos;ll learn</span>
           </p>
         </div>
 

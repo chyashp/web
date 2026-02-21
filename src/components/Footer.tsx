@@ -67,95 +67,103 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white" aria-labelledby="footer-heading">
+    <footer aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8">
-        <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-          <div className="space-y-8">
-            <Link
-              href="/"
-              className="text-2xl font-bold tracking-tight text-navy-500"
-            >
-              nanushi.
-            </Link>
-            <p className="text-sm leading-6 text-gray-600">
-              intelligent digital solutions for modern businesses.
+      {/* Gradient top border */}
+      <div className="h-1 bg-gradient-to-r from-primary-500 via-orange-400 to-primary-600" />
+
+      <div className="bg-gradient-to-b from-navy-500 to-navy-500/95">
+        <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-20 lg:px-8">
+          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
+            <div className="space-y-6">
+              <Link
+                href="/"
+                className="text-2xl font-bold tracking-tight text-white"
+              >
+                nanushi<span className="text-primary-400">.</span>
+              </Link>
+              <p className="text-sm leading-6 text-gray-400">
+                Intelligent digital solutions for modern businesses.
+              </p>
+              <div className="flex space-x-5">
+                {navigation.social.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className="text-gray-400 hover:text-primary-400 transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    <item.icon className="h-5 w-5" aria-hidden={true} />
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="mt-16 grid grid-cols-3 gap-8 xl:col-span-2 xl:mt-0">
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-primary-400 uppercase tracking-wider">
+                  Company
+                </h3>
+                <ul role="list" className="mt-6 space-y-3">
+                  {navigation.company.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-sm leading-6 text-gray-400 hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-primary-400 uppercase tracking-wider">
+                  Community
+                </h3>
+                <ul role="list" className="mt-6 space-y-3">
+                  {navigation.community.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-sm leading-6 text-gray-400 hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold leading-6 text-primary-400 uppercase tracking-wider">
+                  Legal
+                </h3>
+                <ul role="list" className="mt-6 space-y-3">
+                  {navigation.legal.map((item) => (
+                    <li key={item.name}>
+                      <Link
+                        href={item.href}
+                        className="text-sm leading-6 text-gray-400 hover:text-white transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 border-t border-white/10 pt-8 sm:mt-16 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <p className="text-xs leading-5 text-gray-500">
+              &copy; {new Date().getFullYear()} nanushi. All rights reserved.
             </p>
-            <div className="flex space-x-6">
-              {navigation.social.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-400 hover:text-primary-500 transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span className="sr-only">{item.name}</span>
-                  <item.icon className="h-6 w-6" aria-hidden={true} />
-                </a>
-              ))}
-            </div>
+            <p className="text-xs leading-5 text-gray-500">
+              Built with passion in the cloud.
+            </p>
           </div>
-          <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div>
-              <h3 className="text-sm font-semibold leading-6 text-navy-500">
-                Company
-              </h3>
-              <ul role="list" className="mt-6 space-y-4">
-                {navigation.company.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-sm leading-6 text-gray-600 hover:text-navy-500 transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold leading-6 text-navy-500">
-                Community
-              </h3>
-              <ul role="list" className="mt-6 space-y-4">
-                {navigation.community.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-sm leading-6 text-gray-600 hover:text-navy-500 transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-sm font-semibold leading-6 text-navy-500">
-                Legal
-              </h3>
-              <ul role="list" className="mt-6 space-y-4">
-                {navigation.legal.map((item) => (
-                  <li key={item.name}>
-                    <Link
-                      href={item.href}
-                      className="text-sm leading-6 text-gray-600 hover:text-navy-500 transition-colors"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-          <p className="text-xs leading-5 text-gray-500">
-            &copy; {new Date().getFullYear()} nanushi. all rights reserved.
-          </p>
         </div>
       </div>
     </footer>

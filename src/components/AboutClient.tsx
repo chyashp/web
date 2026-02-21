@@ -10,6 +10,7 @@ import {
   ShieldCheckIcon,
 } from "@heroicons/react/24/outline";
 import ScrollReveal from "@/components/ScrollReveal";
+import { AboutIllustration } from "@/components/illustrations";
 import { GradientBlob, DotGrid, GlowOrb } from "@/components/decorations";
 
 const values = [
@@ -73,29 +74,39 @@ export default function AboutClient() {
   return (
     <main className="relative pt-20">
       {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-b from-primary-50 to-white">
-        <GradientBlob color="orange" size={500} className="-top-20 -right-20" />
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8 lg:py-32">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-navy-500 sm:text-6xl">
-              About nanushi
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              We&apos;re an AI & web development company building intelligent
-              digital solutions for modern businesses.
-            </p>
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/25 via-orange-50/50 to-primary-100/35" />
+        <div className="absolute inset-0 bg-white/45" />
+        <div className="relative mx-auto max-w-7xl px-6 pt-8 pb-10 sm:pt-12 sm:pb-14 lg:px-8">
+          <div className="grid lg:grid-cols-2 lg:gap-8 items-center">
+            <div>
+              <div className="inline-flex items-center rounded-full bg-primary-500/15 px-4 py-1.5 text-sm font-semibold text-primary-600 mb-6 ring-1 ring-primary-500/20">
+                Who We Are
+              </div>
+              <h1 className="text-4xl font-bold tracking-tight text-navy-500 sm:text-6xl">
+                About nanushi
+              </h1>
+              <div className="mt-4 h-1 w-24 rounded-full bg-gradient-to-r from-primary-500 to-orange-400" />
+              <p className="mt-6 text-lg leading-8 text-navy-500/70">
+                We&apos;re an AI & web development company building intelligent
+                digital solutions for modern businesses.
+              </p>
+            </div>
+            <ScrollReveal delay={0.2} className="hidden lg:block">
+              <AboutIllustration className="w-full max-w-sm mx-auto" />
+            </ScrollReveal>
           </div>
         </div>
       </div>
 
       {/* Mission & Story */}
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <div className="mx-auto max-w-3xl">
+        <div className="mx-auto max-w-5xl">
           <div className="space-y-12">
             <ScrollReveal>
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-primary-500">
-                  Our Mission
+                <h2 className="text-3xl font-bold tracking-tight">
+                  <span className="bg-gradient-to-r from-primary-500 to-orange-500 bg-clip-text text-transparent">Our Mission</span>
                 </h2>
                 <p className="mt-6 text-xl leading-8 text-gray-600">
                   To empower businesses with intelligent, scalable software
@@ -113,8 +124,8 @@ export default function AboutClient() {
 
             <ScrollReveal>
               <div>
-                <h2 className="text-3xl font-bold tracking-tight text-primary-500">
-                  Who We Are
+                <h2 className="text-3xl font-bold tracking-tight">
+                  <span className="bg-gradient-to-r from-primary-500 to-orange-500 bg-clip-text text-transparent">Who We Are</span>
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-gray-600">
                   nanushi is a team of experienced developers, designers, and
@@ -135,15 +146,15 @@ export default function AboutClient() {
       </div>
 
       {/* Values */}
-      <div className="relative overflow-hidden bg-gray-50 py-16 sm:py-24">
+      <div className="relative overflow-hidden bg-gradient-to-b from-orange-50/40 to-primary-50/25 py-16 sm:py-24">
         <DotGrid opacity={0.2} />
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-lg font-semibold leading-7 text-primary-500">
               Our Values
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
-              What drives us
+            <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+              <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">What drives us</span>
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               These core principles guide everything we do, from how we work
@@ -179,8 +190,8 @@ export default function AboutClient() {
           <h2 className="text-lg font-semibold leading-7 text-primary-500">
             Our Team
           </h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
-            Experience that delivers
+          <p className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
+            <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">Experience that delivers</span>
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             A multidisciplinary team with deep expertise across the full
@@ -266,8 +277,8 @@ export default function AboutClient() {
         <GradientBlob color="orange" size={400} className="top-0 left-1/2 -translate-x-1/2" />
         <ScrollReveal>
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
-              Let&apos;s work together
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              <span className="bg-gradient-to-r from-navy-500 to-primary-600 bg-clip-text text-transparent">Let&apos;s work together</span>
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
               Whether you need a custom AI solution, a modern web application, or
