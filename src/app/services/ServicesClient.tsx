@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import ContactModal from '@/components/ContactModal'
+import ScrollReveal from '@/components/ScrollReveal'
+import { GradientBlob } from '@/components/decorations'
 import {
   SparklesIcon,
   CodeBracketIcon,
@@ -125,7 +127,8 @@ export default function ServicesClient() {
   return (
     <main className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative pt-20 bg-gradient-to-b from-primary-50 to-white">
+      <div className="relative pt-20 bg-gradient-to-b from-primary-50 to-white overflow-hidden">
+        <GradientBlob color="orange" size={500} className="-top-20 -right-20" />
         <div className="mx-auto max-w-7xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-24 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-bold tracking-tight text-navy-500 sm:text-6xl">
@@ -142,7 +145,8 @@ export default function ServicesClient() {
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
         <div className="space-y-24">
           {services.map((service, index) => (
-            <div key={service.id} id={service.id} className="relative">
+            <ScrollReveal key={service.id}>
+            <div id={service.id} className="relative">
               <div className={`grid gap-12 lg:grid-cols-2 lg:gap-16 ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                 <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
                   <div className="flex items-center gap-x-4 mb-6">
@@ -212,6 +216,7 @@ export default function ServicesClient() {
                 <div className="mt-24 border-t border-gray-200" />
               )}
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
@@ -227,6 +232,7 @@ export default function ServicesClient() {
               We offer a wide range of specialized services to complement your project needs.
             </p>
           </div>
+          <ScrollReveal>
           <div className="mx-auto mt-16 grid max-w-lg gap-6 sm:mt-20 lg:max-w-none lg:grid-cols-5 sm:grid-cols-3 grid-cols-2">
             {additionalServices.map((service) => (
               <div
@@ -238,11 +244,14 @@ export default function ServicesClient() {
               </div>
             ))}
           </div>
+          </ScrollReveal>
         </div>
       </div>
 
       {/* Final CTA */}
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+      <div className="relative overflow-hidden mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+        <GradientBlob color="orange" size={400} className="top-0 left-1/2 -translate-x-1/2" />
+        <ScrollReveal>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-navy-500 sm:text-4xl">
             Ready to get started?
@@ -259,6 +268,7 @@ export default function ServicesClient() {
             </button>
           </div>
         </div>
+        </ScrollReveal>
       </div>
 
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />

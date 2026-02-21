@@ -4,6 +4,8 @@ import { useState } from "react";
 import ContactModal from "@/components/ContactModal";
 import ProjectCarousel from "@/components/ProjectCarousel";
 import Link from "next/link";
+import ScrollReveal from "@/components/ScrollReveal";
+import { GradientBlob } from "@/components/decorations";
 
 interface Project {
   name: string;
@@ -156,7 +158,8 @@ export default function ProjectsClient() {
   return (
     <main className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative pt-20 bg-gradient-to-b from-primary-50 to-white">
+      <div className="relative pt-20 bg-gradient-to-b from-primary-50 to-white overflow-hidden">
+        <GradientBlob color="orange" size={500} className="-top-20 -right-20" />
         <div className="mx-auto max-w-7xl px-6 pt-24 pb-16 sm:pt-32 sm:pb-24 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1
@@ -205,8 +208,8 @@ export default function ProjectsClient() {
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
         <div className="grid gap-12 lg:gap-16">
           {filteredProjects.map((project, index) => (
+            <ScrollReveal key={project.name}>
             <div
-              key={project.name}
               className={`grid gap-8 lg:grid-cols-2 lg:gap-12 lg:items-center ${index % 2 === 1 ? "lg:grid-flow-dense" : ""}`}
             >
               <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
@@ -356,11 +359,13 @@ export default function ProjectsClient() {
                 )}
               </div>
             </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
 
       {/* Community Projects */}
+      <ScrollReveal>
       <div className="bg-gray-50 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
@@ -397,9 +402,12 @@ export default function ProjectsClient() {
           </div>
         </div>
       </div>
+      </ScrollReveal>
 
       {/* CTA */}
-      <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+      <div className="relative overflow-hidden mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
+        <GradientBlob color="orange" size={400} className="top-0 left-1/2 -translate-x-1/2" />
+        <ScrollReveal>
         <div className="mx-auto max-w-2xl text-center">
           <h2
             className="text-3xl font-bold tracking-tight sm:text-4xl"
@@ -424,6 +432,7 @@ export default function ProjectsClient() {
             </button>
           </div>
         </div>
+        </ScrollReveal>
       </div>
 
       <ContactModal
